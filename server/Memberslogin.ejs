@@ -1,0 +1,12 @@
+<%- include('./particle/head.ejs') %>
+<body>
+    <%- include('./particle/header.ejs') %>
+        <% base.forEach(user => { %>
+            <span id="base">
+                name : <%= user.name %><br>
+                email : <%= user.email %><br>
+                message : <%= user.message %><br>
+            </span>
+        <% }) %>
+</body>
+</html>
