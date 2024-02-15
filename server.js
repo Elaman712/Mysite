@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = '2000';
+const PORT = '4000';
 const mysite = 'localhost';
 const mongoose = require('mongoose');
 const Contact = require('./schema/contact');
 const { constants } = require('buffer');
 const db = "mongodb+srv://sattarovelaman06:elaman0607@cluster.c1a7xdx.mongodb.net/?retryWrites=true&w=majority"
 const CreatPath = (page) => path.resolve(__dirname,'server', `${page}.ejs`);
+const base = [{name:'Javoxir',email:'shavkatov.j.x@gmail.com',message:'Hello World!'}];
 
 mongoose.connect(db).then(()=>{
     console.log('mangoga ulandi')
